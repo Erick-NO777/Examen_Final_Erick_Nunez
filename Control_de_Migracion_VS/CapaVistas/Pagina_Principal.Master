@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Pagina_Principal.master.cs" Inherits="Control_de_Migracion_VS.CapaVistas.Pagina_Principal" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <title>Control de Migración</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../CSS/Pagina_Principal.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav>
+            <div class="wrapper">
+                <div class="logo"><a href="#">Control de Migración</a></div>
+                <input type="radio" name="slider" id="menu-btn">
+                <input type="radio" name="slider" id="close-btn">
+                <ul class="nav-links">
+                    <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                    <li><a href="Inicio.aspx">Inicio</a></li>
+                    <li>
+                        <a href="#" class="desktop-item">Viajeros</a>
+                        <input type="checkbox" id="showDrop1">
+                        <label for="showDrop1" class="mobile-item">Registro de Viajeros</label>
+                        <ul class="drop-menu">
+                            <li><a href="Nuevo_Viajero.aspx">Nuevo Viajero</a></li>
+                            <li><a href="Actualizar_Viajero.aspx">Actualizar Viajero</a></li>
+                            <li><a href="Eliminar_Viajero.aspx">Eliminar Viajero</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="desktop-item">Entradas y Salidas</a>
+                        <input type="checkbox" id="showDrop2">
+                        <label for="showDrop2" class="mobile-item">Registro de entradas y salidas</label>
+                        <ul class="drop-menu">
+                            <li><a href="Registrar_Entrada.aspx">Registrar Entrada</a></li>
+                            <li><a href="Registrar_Salida.aspx">Registrar Salida</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+            </div>
+        </nav>
+        <!-- Main -->
+        <main id="main" class="nav-links">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>  
+    </form>
+</body>
+</html>
